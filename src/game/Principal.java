@@ -38,7 +38,7 @@ public class Principal {
 					fim++;
 					System.out.println("A letra '"+letra+"' existe");
 				}
-				if(i==(ch.length-1)){
+				if(i==ch.length-1){
 					System.out.println("Não existe a letra '"+letra+"' na palavra");
 					erro++;
 					System.out.println("Falta "+(5-erro)+" tentativas");
