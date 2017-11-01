@@ -10,6 +10,7 @@ public class Principal {
 		char letra;
 		int erro = 0;
 		int fim=0;
+		boolean acerto = false;
 		
 		do{
 			System.out.println("Escolha uma Palavra");
@@ -36,14 +37,17 @@ public class Principal {
 					descubra[i]=ch[i];
 					ch[i]=' ';
 					fim++;
-					System.out.println("A letra '"+letra+"' existe");
+					acerto = true;
 				}
-				if(i==ch.length-1){
+			}
+				if(acerto){
+					System.out.println("A letra '"+letra+"' existe");
+					acerto = false;
+				}else{
 					System.out.println("Não existe a letra '"+letra+"' na palavra");
 					erro++;
 					System.out.println("Falta "+(5-erro)+" tentativas");
 				}	
-			}
 			
 			for(int i=0; i<ch.length; i++){
 				if(descubra[i]!='\0')
